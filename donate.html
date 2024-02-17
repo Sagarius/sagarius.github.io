@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,600&family=Oswald:wght@200&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <style>
+                @font-face{font-family:'Papyrus';src:url('font/papyrus.ttf')format('truetype')}
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #313131, #1f1f1f);
+            color: #fff;
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #0f0f0f, #424242);
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            background: linear-gradient(135deg, #0e0e0e, #313131);
+            padding: 50px 0;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .service {
+            background-color: #444;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            width: 400px; 
+            height: 300px; 
+            position: relative;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+        }
+        .service h3 {
+            margin-top: 0;
+            font-family: Papyrus, sans-serif;
+        }
+        .service p {
+            margin-bottom: 0;
+            font-family: Raleway, sans-serif;
+        }
+        .knopkaqiwi {
+            background-color: #f57c00;
+            color: #fff;
+            border: none;
+            border-radius: 13px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 40px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        .knopkaqiwi:hover {
+            background-color: #ffb224;
+            border-radius: 20px;
+        }
+
+        .knopkaton {
+            background-color: #07006d;
+            color: #fff;
+            border: none;
+            border-radius: 13px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 40px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        .knopkaton:hover {
+            background-color: #2a28ce;
+            border-radius: 20px;
+        }
+
+        .knopkamir {
+            background-color: #00471b;
+            color: #fff;
+            border: none;
+            border-radius: 13px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            bottom: 40px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+        .knopkamir:hover {
+            background-color: #249924;
+            border-radius: 20px;
+        }
+        
+        .merchandise-purchase {
+            background: linear-gradient(45deg, #173b18, #00925a);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            width: 400px;
+            height: 165px;
+            position: relative;
+    }
+         .patreon-subscription {
+            background: linear-gradient(135deg, #15004e, #526cff);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: all 0.3s ease;
+            width: 400px;
+            height: 165px;
+            position: relative;
+       }
+    .paypal-donation {
+         background: linear-gradient(90deg, #e0ac00, #a3ad17);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        transition: all 0.3s ease;
+        width: 400px;
+        height: 165px;
+        position: relative;
+}
+.snowflake {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.7;
+}
+
+    </style>
+</head>
+<body id="snowfall">
+    <header>
+        <h1>ㅤ</h1>
+    </header>
+    <section>
+        <div class="services">
+            <div class="service paypal-donation">
+                <h3>QIWI</h3>
+                <p>группа компаний, которая предоставляет платежные и финансовые сервисы</p>
+                <button class="knopkaqiwi" onclick="copyText('HECKER459')">Копировать QIWI</button>
+            </div>
+            <div class="service patreon-subscription">
+                <h3>TON</h3>
+                <p>нативная монета TON. Она используется в сетевых операциях, транзакциях, играх и NFT.</p>
+                <button class="knopkaton" onclick="copyText('EQAnUm6XFajM7NjDGzPXYopDcqBTBWMyPjiCfP718j69ffpa')">Копировать TON</button>
+            </div>
+            <div class="service merchandise-purchase">
+                <h3>Карта Мир</h3>
+                <p>платёжная система, предоставляющая услуги проведения платёжных операций и выпускающая банковские карты</p>
+                <button class="knopkamir" onclick="copyText('2200 7302 5370 5947')">Копировать</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        function copyText(text) {
+
+            var tempElement = document.createElement('textarea');
+            tempElement.value = text;
+
+
+            document.body.appendChild(tempElement);
+
+
+            tempElement.select();
+            document.execCommand('copy');
+
+            document.body.removeChild(tempElement);
+
+            alert('Текст скопирован: ' + text);
+        }
+        </script>
+</body>
+<script>
+
+    var images = ["ton.png", "usdt.png"];
+
+    function createSnowflake() {
+
+        var snowflake = document.createElement("img");
+
+        snowflake.src = images[Math.floor(Math.random() * images.length)];
+
+        snowflake.classList.add("snowflake");
+
+        var size = Math.random() * 10 + 20; 
+        snowflake.style.width = size + "px";
+        snowflake.style.height = size + "px";
+
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+
+        snowflake.style.top = -100 + "px";
+
+        document.getElementById("snowfall").appendChild(snowflake);
+
+        var speed = Math.random() * 3 + 1;
+
+        animateSnowflake(snowflake, speed);
+    }
+
+    function animateSnowflake(snowflake, speed) {
+        // Анимация падения
+        var animation = snowflake.animate(
+            [{ top: "-100px" }, { top: window.innerHeight + "px" }],
+            {
+                duration: 5000 / speed, 
+                easing: "linear",
+                iterations: Infinity 
+            }
+        );
+
+        animation.onfinish = function() {
+            snowflake.remove();
+        };
+    }
+
+
+    setInterval(createSnowflake, 10000);
+</script>
+</html>

@@ -8,7 +8,7 @@
 
     <style>
         @font-face{font-family:'Papyrus';src:url('font/papyrus.ttf')format('truetype')}
-
+        @font-face{font-family:'Minecraft';src:url('font/minecraft.ttf')format('truetype')}
         body {
             display: flex;
             justify-content: center;
@@ -347,151 +347,6 @@ container {
   text-decoration: none;
 }
 
-
-.donate-section {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 650px;
-  height: 340px;
-  background-color: #000000;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #454545;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-  font-size: 24px;
-  color: #6d14b8;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-.show-donate-section {
-  bottom: 100px;
-  opacity: 1;
-  visibility: visible;
-}
-
-
-.donate-tab {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 60px;
-  height: 40px;
-  background-color: #000000;
-  border-radius: 10px;
-  color: #eeeeee;
-  font-size: 18px;
-  text-align: center;
-  line-height: 40px;
-  cursor: pointer;
-}
-
-.button-container {
-    display: flex;
-    width: 100%;
-}
-
-
-
-#social-wor {
-  display: block; 
-}
-
-.button-container {
-  display: flex; 
-  justify-content: center; 
-}
-
-.social-cryptobot {
-    background-image: linear-gradient(#60E4FF, #00ACCE);
-  color: white;
-  border: none; 
-  padding: 40px 15px; 
-  margin: 30px; 
-  border-radius: 4px;
-  font-size: 16px; 
-  cursor: pointer; 
-  position: relative;
-  bottom: 120px;
-  left: 0px
-}
-
-.social-mir {
-  background-image: linear-gradient(#003605, #044c00);
-  color: white; 
-  border: none; 
-  padding: 40px 40px; 
-  margin: 30px; 
-  border-radius: 4px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  position: relative;
-  bottom: 120px;
-  left: 0px;
-}
-
-.social-ton {
-  background-image: linear-gradient(#296389, #44B6F5);
-  color: white; 
-  border: none; 
-  padding: 40px 33px; 
-  margin: 30px; 
-  border-radius: 4px; 
-  font-size: 16px; 
-  cursor: pointer; 
-  position: relative;
-  bottom: 120px;
-  left: 0px;
-}
-
-.social-donationalerts {
-    background-image: linear-gradient(#FF6E00, #F79400);
-  color: white;
-  border: none; 
-  padding: 40px 24px; 
-  margin: 30px; 
-  border-radius: 4px;
-  font-size: 16px; 
-  cursor: pointer; 
-  position: relative;
-  bottom: 130px;
-  left: -15px;
-}
-
-.social-Qiwi {
-    background-image: linear-gradient(#FF8601, #FFA348);
-    color: white;
-    border: none; 
-    padding: 40px 61px; 
-    margin: 30px; 
-    border-radius: 4px;
-    font-size: 16px; 
-    cursor: pointer; 
-    position: relative;
-    bottom: 140px; 
-    left: -15px;
-}
-
-.social-YooMoney {
-    background-image: linear-gradient(#B600FF, #D165FF);
-  color: white;
-  border: none; 
-  padding: 40px 40px; 
-  margin: 30px; 
-  border-radius: 4px;
-  font-size: 16px; 
-  cursor: pointer; 
-  position: relative;
-  bottom: 130px;
-  left: -15px;
-}
-
-
 .text {
     position: absolute;
     top: 50%;
@@ -516,22 +371,30 @@ container {
       opacity: 0;
       transform: translate(-50%, -150%);
     }
-  }
+}
+
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    width: 20px; 
+    height: 20px; 
+}
+
+.text-snowflake {
+    position: absolute;
+    color: white;
+    font-family: 'Minecraft', sans-serif; 
+}
 /* thx ivan */
 /* Иван Соси */
-
-    @media (max-width: 800px) {
-    section {
-        min-height: 100px;
-        width: auto;
-        max-width: 740px; 
-    }
-
-    .donate-section {
-        min-width: 280px;
-        width: auto;
-    }
-    }
     </style> 
     <script>
         function toggleSocialRow() {
@@ -585,6 +448,7 @@ function closeSocialRow() {
 </script>
 </head>
 <body>
+    <div id="snow-container"></div>
     <section>
         <img src="img/ava.jpg" alt="ava" class="ava">
         <h1>Sagarius</h1>
@@ -601,31 +465,67 @@ function closeSocialRow() {
                 <a href="https://steamcommunity.com/id/verlity" class="social-button steam-button"><i class="fab fa-steam-symbol"></i>Steam</a>
             </div>
         </div>
-        <div id="donate-button" class="donate-row" onclick="toggleSocialRow()">
-            <button class="donate-button"><i class="fas fa-donate"></i>Donate</button>
-        </div>
+        <div id="donate-button" class="donate-row">
+            <a href="donate.html" class="donate-button"><i class="fas fa-donate"></i>Donate</a>
+        </div>        
     </section>
 
+    <script>
+const snowflakeImages = [
+    "komaru.jpg",
+    "komaru2.jpg",
+    "komaru3.jpg",
+    "komaru4.jpg",
+    "komaru5.jpg"
+];
 
-    <section class="donate-section">
-    <div class="donate">
-        <div class="donate-tab" onclick="closeSocialRow()">X</div>
-          </div>
-        <div class="social-button">
-           <div class="social-row">
-              <button class="social-row social-mir" onclick="copyText('2200 7302 5370 5947')">
-                <i class="fab fa-sketch"></i>
-                МИР 
-              <button class="social-row social-ton" onclick="copyText('EQAnUm6XFajM7NjDGzPXYopDcqBTBWMyPjiCfP718j69ffpa')">
-                <i class="fab fa-sketch"></i>
-                TONAddress
-              </button>
-         </div>
+const chanceOfText = 0.01;
 
-        <div class="social-button">
-            <div class="social-row">
-             <a href="https://qiwi.com/n/HECKER459" class="social-row social-Qiwi"><i class="fas fa-wallet"></i>QIWI</a>
+function createSnowflakes() {
+    const container = document.getElementById("snow-container");
 
-</section>
+    for (let i = 0; i < 50; i++) {
+        const snowflake = document.createElement("img");
+
+
+        if (Math.random() < chanceOfText) {
+            snowflake.alt = "TG @komaru_GIF";
+            snowflake.classList.add("text-snowflake");
+        } else {
+            snowflake.src = snowflakeImages[Math.floor(Math.random() * snowflakeImages.length)];
+            snowflake.classList.add("snowflake");
+        }
+
+        container.appendChild(snowflake);
+
+
+        const initialX = Math.random() * window.innerWidth;
+        const initialY = Math.random() * window.innerHeight;
+        const speed = 1 + Math.random() * 2;
+
+
+        moveSnowflake(snowflake, initialX, initialY, speed);
+    }
+}
+
+
+function moveSnowflake(snowflake, x, y, speed) {
+    let posX = x;
+    let posY = y;
+
+    const animation = setInterval(() => {
+        posY += speed;
+        snowflake.style.transform = `translate(${posX}px, ${posY}px)`;
+
+        if (posY > window.innerHeight) {
+            posY = -100;
+            posX = Math.random() * window.innerWidth;
+        }
+    }, 30);
+}
+
+window.onload = createSnowflakes;
+
+</script>
 </body>
 </html> 
