@@ -2,9 +2,11 @@
 /* CSS Document */
 
 #navbar {
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 0px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
 }
 
 .article {
