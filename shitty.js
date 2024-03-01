@@ -1,6 +1,8 @@
 var audioPlayed = false;
-var logoState = 0; // 0 - первый логотип, 1 - второй логотип
-var maxLogoState = 2; // Максимальное значение состояния логотипа
+var logoAudioPlayed = false;
+var logoState = 0;
+var maxLogoState = 2;
+var clickCount = 0;
 
 function changeLogo() {
   var logo = document.querySelector('.logo');
@@ -9,17 +11,19 @@ function changeLogo() {
       logo.src = 'xd.png';
       logo.style.width = '100px';
       logo.style.height = '100px';
-      logo.style.animation = 'logoChange 0.5s ease-in-out'; // Добавляем анимацию при изменении логотипа
+      logo.style.animation = 'logoChange 0.5s ease-in-out';
       logoState++;
     } else if (logoState === 1) {
       logo.src = 'asnodt.png';
-      logo.style.width = '109px';
-      logo.style.height = '84px';
-      logo.style.animation = 'logoChange 0.5s ease-in-out'; // Добавляем анимацию при изменении логотипа
-      var logoAudio = new Audio('logo.mp3');
-      logoAudio.play();
+      logo.style.width = '126px';
+      logo.style.height = '123px';
+      logo.style.animation = 'logoChange 0.5s ease-in-out';
+      if (!logoAudioPlayed) {
+        var logoAudio = new Audio('logo.mp3');
+        logoAudio.play();
+        logoAudioPlayed = true;
+      }
       logoState++;
-      logo.onclick = null; // Удаляем обработчик события клика после блокировки логотипа
     }
     if (!audioPlayed) {
       var audio = new Audio('disappeared.mp3');
@@ -27,8 +31,15 @@ function changeLogo() {
       audioPlayed = true;
     }
   } else {
-    var logoAudio = new Audio('logo.mp3');
-    logoAudio.play();
+    if (!logoAudioPlayed) {
+      var logoAudio = new Audio('logo.mp3');
+      logoAudio.play();
+      logoAudioPlayed = true;
+    }
+  }
+  
+  if (logoState === maxLogoState && clickCount >= 5) {
+    window.location.href = 'g/u/i/d/e/x/d/howto.html';
   }
 }
 
@@ -37,5 +48,11 @@ document.querySelector('.note').addEventListener('click', function() {
     var audio = document.getElementById('audio');
     audio.play();
     audioPlayed = true;
+  }
+});
+
+document.querySelector('.logo').addEventListener('click', function() {
+  if (logoState === maxLogoState) {
+    clickCount++;
   }
 });
