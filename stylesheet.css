@@ -13,15 +13,6 @@
 	
 	}
 	
-body {
- 	background-image:url("xd4.gif");
-	background-color:#d2738a;
-	color:#c1b492;	
-	
-
-	
-	}
-	
 a {
 	text-decoration:none;
 	
@@ -66,13 +57,21 @@ h6 {
 	font-size:9px;
 	
 	}
-
+	
+.intro {
+	font-size:9px;
+	
+	}
 	
 .copy {
 	font-size:11px;
 	
 	}
-
+	
+.mail {
+	font-size:9px;
+	
+	}
 	
 .logo {
 	margin:20px;
@@ -115,8 +114,54 @@ hr {
 	
 	
 	}
+	
+#enterWired {
+	display:block;
+	background-image:url(/16c.gif);
+	width:838px;
+	height:650px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+	}
+	
+	
+.article {
+	width:800px;
+	background-color:#00000000;
+	background-image:url("/bg-rip-02.gif");
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:40px;
+	box-shadow:black 0px 5px 10px;
+	text-align:center;
+	letter-spacing:1px;
+	font-size:13px;
+	padding-top:20px;
 
 	
+	}
+	
+.article p {
+	margin:20px;
+	font-size:13px;
+
+	
+	}
+	
+.date {
+	font-size:9px;
+	line-height:0px;
+	margin:0px;
+	
+	}
+.author {
+	font-size:13px;
+	line-height:40px;
+	margin:0px;
+	
+	}
 	
 h5 {
 	font-weight:normal;
@@ -128,6 +173,137 @@ b {
 	
 	}
 	
+#footer {
+	margin-top:70px;
+	color:#d2738a;
+	border:0px;
+	text-align:center;
+	letter-spacing:8px;
+	font-size:9px;
+	margin-bottom:20px;
+	}
+	
+#footer span {
+	background-color:black;
+	padding:3px;
+	
+	
+	}
+
+#footer a {
+	text-decoration:underline;	
+	}
+	
+	
+#note {
+	letter-spacing:0px;
+	}
+	
+.article .comment {
+	font-size:9px;
+	}
+	
+.jap {
+	font-smooth: auto !important;
+	-webkit-font-smoothing : auto !important;
+	
+	}
+	
+.iconA {
+	background-image:url(/favicon_16px.gif);
+	background-repeat:no-repeat;
+	height:16px;
+	width:16px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	
+	}
+	
+.iconB {
+	background-image:url(https://fauux.neocities.org/ether/favicon-02.gif);
+	background-repeat:no-repeat;
+	height:16px;
+	width:16px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	
+	}	
+	
+
+	
+
+.del1s {
+	animation: blink 2s linear infinite;
+	animation-delay: 0s;
+	letter-spacing:0px
+	
+	}	
+	
+.del1s5ms {
+	animation: blink 2s linear infinite;
+	animation-delay: 0.4s;
+	letter-spacing:0px
+	
+	}	
+	
+.del2s {
+	animation: blink 2s linear infinite;
+	animation-delay: 0.8s;
+	letter-spacing:0px
+	
+	}
+	
+	
+.del4s {
+	animation: blink 2s linear infinite;
+	animation-delay: 1.2s;
+	letter-spacing:0px
+	
+	}	
+	
+.del5s {
+	animation: blink 2s linear infinite;
+	animation-delay: 1.6s;
+	letter-spacing:0px
+	
+	}	
+
+.del6s {
+	animation: blink 2s linear infinite;
+	animation-delay: 2s;
+	letter-spacing:0px
+	
+	}	
+
+.blink {
+  animation: blink 2s linear infinite;
+}
+
+.Bfast {
+	  animation: blink 2s ease-out infinite;
+
+	}
+	
+.wiredAnim {
+		  animation: wiredB 2s ease-in-out infinite;
+	}
+	
+.wdel1s {
+	animation: wiredB 2s ease-in-out infinite;
+	animation-delay: 0.4s;	
+	}
+	
+.wdel2s {
+	animation: wiredB 2s ease-in-out infinite;
+	animation-delay: 0.8s;	
+	}
+	
+.wdel3s {
+	animation: wiredB 2s ease-in-out infinite;
+	animation-delay: 1.2s;	
+	}
 	
 @keyframes blink {
   50% {
@@ -150,5 +326,3 @@ b {
  }
 
 
-
-/* thx fauux */
