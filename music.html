@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Музыка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-right: 300px;
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .box {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .artist-info-box {
+            width: 300px;
+            height: 250px;
+        }
+        .artist-name {
+            font-family: Space Grotesk;
+            font-size: 1.8em;
+        }
+        .artist-avatar {
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+        }
+        .song-info-box {
+            width: 250px;
+            height: 250px;
+        }
+        .song-cover {
+            margin-bottom: 10px;
+        }
+        .song-title {
+            font-family: Dosis;
+            font-size: 1.4em;
+        }
+        .platforms {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .platform {
+            background: rgba(255, 255, 255, 0);
+            border: 2px solid rgba(255, 255, 255, 0);
+            border-radius: 10px;
+            padding: 20px;
+            transition: background 0.3s, transform 0.3s;
+            text-align: center;
+            cursor: pointer;
+        }
+        .platform:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        .platform img {
+            width: 100px;
+            height: auto;
+        }
+        .center {
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="box artist-info-box">
+                <img class="artist-avatar" src="assets/sagarius.gif" alt="Artist Avatar">
+                <div class="artist-name">Sagarius</div>
+            </div>
+            <div class="box song-info-box">
+                <img class="song-cover" src="assets/bloodblooms.jpg" alt="Song Cover">
+                <div class="song-title">Blood Blooms</div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="box platforms-box">
+                <div class="platforms">
+                    <div class="row">
+                        <div class="platform" onclick="window.location.href='https://music.youtube.com/watch?v=p0ZYOCQY-Ow&si=Oa2HnlRlsoe2XpeV'">
+                            <img src="assets/youtubemusic.webp" alt="YouTube Music">
+                        </div>
+                        <div class="platform" onclick="window.location.href='https://music.mts.ru/album/31813696/track/127438985'">
+                            <img src="assets/mts.png" alt="МТС Музыка">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="platform" onclick="window.location.href='https://music.amazon.com/tracks/B0D7V1V1P8?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_ciRxiVVFFpFbRJR8VDTSGgv8X'">
+                            <img src="assets/amazon.png" alt="Amazon Music">
+                        </div>
+                        <div class="platform center" onclick="window.location.href='https://open.spotify.com/album/4dUvj0ANRabSlDIdXdOwW0?si=cXHO3T2-RoqbTe0qDVGShg'">
+                            <img src="assets/spotify.webp" alt="Spotify">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="platform" onclick="window.location.href='https://music.yandex.ru/album/31813696/track/127438985'">
+                            <img src="assets/yandex.png " alt="Яндекс Музыка">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
